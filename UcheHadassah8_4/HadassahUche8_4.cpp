@@ -26,11 +26,12 @@ int main()
 			count++;
 		p++;
 	}
+	p = word;//Reset the pointer
 	cout << " The letter " << letter << " appeared " << count << " times in the word, at position(s) ";
-	while (*p != '\0')
+	for(int i = 0;i<strlen(word);i++)
 	{
 		if (*p == letter)
-			cout << p <<" ";
+			cout << i <<" ";
 		p++;
 	}
 }
