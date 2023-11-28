@@ -6,3 +6,31 @@ Enter a word: anna
 Enter a letter: n
 Letter found at index position(s) 1, 2
 Letter found 2 times.*/
+#include<iostream>
+#include<cstring>
+using namespace std;
+const int MAX = 100;
+int main()
+{
+	char word[MAX];
+	char letter;
+	char* p = word;
+	cout << "Enter a word:";
+	cin >> word;
+	cout << "Enter the letter you wish to search for:";
+	cin >> letter;
+	int count = 0;
+	while (*p != '\0')
+	{
+		if (*p == letter)
+			count++;
+		p++;
+	}
+	cout << " The letter " << letter << " appeared " << count << " times in the word, at position(s) ";
+	while (*p != '\0')
+	{
+		if (*p == letter)
+			cout << p <<" ";
+		p++;
+	}
+}
